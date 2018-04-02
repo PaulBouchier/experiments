@@ -1,0 +1,7 @@
+<launch>
+  <node pkg="experiments" type="private_param" name="thePrivateParamNodeName" output="screen">
+    <param name="aPrivateParam" value="theFirstPrivateParamVal" />
+    <param name="myParams/a2ndPrivateParam" value="the2ndPrivateParamVal" />
+    <rosparam command="load" file="$(find experiments)/config/someParams.yaml" ns="myYamlParams" />
+  </node>
+</launch>
