@@ -135,6 +135,7 @@ include_directories(
 ## The recommended prefix ensures that target names across packages don't collide
 add_executable(ros_assert_test src/ros_assert_test.cpp)
 add_executable(private_param src/private_param.cpp)
+add_executable(console_config src/console_config.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -151,6 +152,9 @@ target_link_libraries(ros_assert_test
   ${catkin_LIBRARIES}
 )
 target_link_libraries(private_param
+  ${catkin_LIBRARIES}
+)
+target_link_libraries(console_config
   ${catkin_LIBRARIES}
 )
 

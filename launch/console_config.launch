@@ -1,0 +1,5 @@
+<launch>
+  <env name="ROSCONSOLE_CONFIG_FILE" value="$(find experiments)/config/rosconsole.conf" />
+  <node pkg="experiments" type="console_config" name="theNoisyConsole" output="screen">
+  </node>
+</launch>
