@@ -136,6 +136,8 @@ include_directories(
 add_executable(ros_assert_test src/ros_assert_test.cpp)
 add_executable(private_param src/private_param.cpp)
 add_executable(console_config src/console_config.cpp)
+add_executable(async_spinner_publisher src/publisher.cpp)
+add_executable(test_async_spinner src/test_async_spinner.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -148,15 +150,11 @@ add_executable(console_config src/console_config.cpp)
 # add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
-target_link_libraries(ros_assert_test
-  ${catkin_LIBRARIES}
-)
-target_link_libraries(private_param
-  ${catkin_LIBRARIES}
-)
-target_link_libraries(console_config
-  ${catkin_LIBRARIES}
-)
+target_link_libraries(ros_assert_test ${catkin_LIBRARIES})
+target_link_libraries(private_param ${catkin_LIBRARIES})
+target_link_libraries(console_config ${catkin_LIBRARIES})
+target_link_libraries(async_spinner_publisher ${catkin_LIBRARIES})
+target_link_libraries(test_async_spinner ${catkin_LIBRARIES})
 
 #############
 ## Install ##
